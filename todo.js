@@ -12,7 +12,16 @@ console.log(`You have ${todo.length} todo's`)
 console.log(`The first thing you have on your list is "${todo[0]}"`)
 console.log(`The second to last thing you have on your list is "${todo[todo.length -2]}"`)
 
-console.log(todo.splice(2, 1))
-console.log(todo.push('also drink sometimes'))
-console.log(todo.shift())
-console.log(todo)
+todo.splice(2, 1)
+todo.push('also drink sometimes')
+todo.shift()
+
+console.log(`You have ${todo.length} todo's`)
+
+let print = function(item, index){
+     //console.log(index+1)
+    //console.log(item)
+    console.log(`${index} - ${item}`)}
+
+todo.forEach(print)
+   
