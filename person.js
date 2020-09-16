@@ -8,4 +8,4 @@ let person = {
 
 console.log(person)
 person.age++
-console.log(person)
+console.log(`${person.name} is ${person.age} and lives in ${person.location}.`)
