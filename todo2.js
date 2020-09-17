@@ -35,7 +35,7 @@ console.log(todo)
 //Filter Excercise
 ///////////////////:///////////////////////
 
-const findTodos = function (todoList, query) {
+const findTodosTodo = function (todoList, query) {
     return todoList.filter(function(todoItem){
     //const isTextMatch = todoItem.text.toLowerCase().includes(query.toLowerCase())
     const isCompletedMatch = todoItem.completed.toLowerCase().includes(query.toLowerCase())
@@ -44,4 +44,23 @@ const findTodos = function (todoList, query) {
 }
 
 
-console.log(findTodos(todo,'no'))
+console.log(findTodosTodo(todo,'no'))
+
+//////////////////////////////////////////
+// Sort Excercise
+//////////////////////////////////////////
+
+const sortTodos = function (todoList) {
+    todoList.sort (function (a, b) {
+        if (a.completed.toLowerCase() < b.completed.toLowerCase()){
+            return -1
+        } else if (b.completed.toLowerCase() < a.completed.toLowerCase()){
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+sortTodos(todo)
+console.log(todo)
