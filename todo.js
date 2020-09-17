@@ -25,3 +25,6 @@ let print = function(item, index){
 
 todo.forEach(print)
    
+for (let count = 0; count < todo.length; count++){
+    console.log(`${count + 1} - ${todo[count]}`)
+}
