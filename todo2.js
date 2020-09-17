@@ -22,39 +22,26 @@ const removeByTextValue = function (todolist, todoText) {
     const index = todolist.findIndex(function (todoItem){
         return todoItem.text.toLowerCase() === todoText.toLowerCase()
     })
-    return index
+    if (index > -1){ // added this line after seeing his solution
+        return index
+    }
     }
 
 console.log(todo)
 todo.splice(removeByTextValue(todo, 'sleep'),1)
 console.log(todo)
 
+///////////////////////////////////////////
+//Filter Excercise
+///////////////////:///////////////////////
+
+const findTodos = function (todoList, query) {
+    return todoList.filter(function(todoItem){
+    //const isTextMatch = todoItem.text.toLowerCase().includes(query.toLowerCase())
+    const isCompletedMatch = todoItem.completed.toLowerCase().includes(query.toLowerCase())
+    return /*isTextMatch ||*/ isCompletedMatch
+})
+}
 
 
-
-
-/* const todo = ['learn JS', 'eat', 'sleep', 'learn more JS', 'make something cool with JS']
-
-console.log(`You have ${todo.length} todo's`)
-console.log(`The first thing you have on your list is "${todo[0]}"`)
-console.log(`The second to last thing you have on your list is "${todo[todo.length -2]}"`)
-
-// Manipulating arrays
-todo.splice(2, 1)
-todo.push('also drink sometimes')
-todo.shift()
-
-// ForEach excercice
-console.log(`You have ${todo.length} todo's`)
-
-let print = function(item, index){
-     //console.log(index+1)
-    //console.log(item)
-    console.log(`${index} - ${item}`)}
-
-todo.forEach(print)
-   
-// Forloop Excercice
-for (let count = 0; count < todo.length; count++){
-    console.log(`${count + 1} - ${todo[count]}`)
-} */
+console.log(findTodos(todo,'no'))
