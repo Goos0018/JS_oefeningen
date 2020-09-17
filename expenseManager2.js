@@ -12,7 +12,7 @@ const account = {
         for (let count = 0; count < this.expenses.length; count++){
             total += this.expenses[count].amount
         }
-        console.log(`${this.name} has €${total} in expenses.`)
+        return `${this.name} has €${total} in expenses.`
     }
 }
 
