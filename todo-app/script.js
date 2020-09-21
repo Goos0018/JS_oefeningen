@@ -38,9 +38,13 @@ todo.forEach(function (todoItem){
     document.querySelector('body').appendChild(p)
 })
 
-
-document.querySelector('button').addEventListener('click', function(e){
+// Button for new todo creation
+document.querySelector('#create-todo').addEventListener('click', function(e){
   e.target.textContent = 'The button was clicked'
     console.log('Adding a new todo!')
   console.log(e)
+})
+
+document.querySelector('#remove-todo').addEventListener('click', function(){
+    console.log("delete al todo's")
 })
