@@ -39,11 +39,8 @@ todo.forEach(function (todoItem){
 })
 
 
-
-
-console.log(findTodosTodo(todo,'no'))
-// Add a p for each todo above (use text value)
-
-const newParagraph = document.createElement ('p')
-newParagraph.textContent = 'This is a new element from JS'
-document.querySelector('body').appendChild(newParagraph)
+document.querySelector('button').addEventListener('click', function(e){
+  e.target.textContent = 'The button was clicked'
+    console.log('Adding a new todo!')
+  console.log(e)
+})
