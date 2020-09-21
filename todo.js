@@ -12,10 +12,12 @@ console.log(`You have ${todo.length} todo's`)
 console.log(`The first thing you have on your list is "${todo[0]}"`)
 console.log(`The second to last thing you have on your list is "${todo[todo.length -2]}"`)
 
+// Manipulating arrays
 todo.splice(2, 1)
 todo.push('also drink sometimes')
 todo.shift()
 
+// ForEach excercice
 console.log(`You have ${todo.length} todo's`)
 
 let print = function(item, index){
@@ -25,6 +27,7 @@ let print = function(item, index){
 
 todo.forEach(print)
    
+// Forloop Excercice
 for (let count = 0; count < todo.length; count++){
     console.log(`${count + 1} - ${todo[count]}`)
 }
