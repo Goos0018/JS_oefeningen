@@ -45,6 +45,11 @@ document.querySelector('#create-todo').addEventListener('click', function(e){
   console.log(e)
 })
 
+// Advanced Queries
 document.querySelector('#remove-todo').addEventListener('click', function(){
-    console.log("delete al todo's")
+    document.querySelectorAll('.todo').forEach
+})
+
+document.querySelector('#search-text').addEventListener('input', function(e){
+    console.log(e.target.value)
 })
